@@ -1,14 +1,10 @@
-
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 import requests
 import pandas as pd
 import numpy as np
 import pyspark as ps
 
 def load_pokemon():
+    # This function will create a pandas dataframe of pokemon from either red, blue, leafgreen or white.
     df_final = pd.DataFrame()
     for index in range(1,905): # Assigning index for each pokemon
         print(index)
