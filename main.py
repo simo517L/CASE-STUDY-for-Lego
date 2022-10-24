@@ -56,7 +56,7 @@ if __name__ == '__main__':
     testP = load_pokemon()
     print(testP)
     # We save the data as a csv
-    testP.to_csv("C:/Users/simon/Desktop/Jobsøgning/Lego/Lego Case/Data/Pokedat.csv", encoding='utf-8', index=False)
+    testP.to_csv("C:/Users/simon/Desktop/Jobsøgning/Lego/Lego Case/Data/Pokedat.csv", encoding='utf-8', index=False,sep= ';')
     # We also create a spark Dataframe from the pandas Dataframe
     spark = ps.sql.SparkSession.builder.getOrCreate()
     spark_df = spark.createDataFrame(testP)
